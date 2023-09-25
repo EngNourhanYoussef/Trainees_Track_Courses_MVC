@@ -1,0 +1,39 @@
+﻿@model Trainees_Track_Courses_MVC.Models.Trainees
+
+@{
+    ViewData["Title"] = "Create";
+    //List<Courses> cr = (List<Courses>)ViewBag.Allcourse;
+    //List<Tracks> Tr = (List<Tracks>)ViewBag.AllTrack;
+    ////SelectList list = new SelectList(ViewBag.Allcourse, "CrsID", "Topic");
+    //SelectList list2 = new SelectList(ViewBag.AllTrack, "TrcID", "Name");
+
+    ////List<Courses> cr = (List<Courses>)ViewBag.Allcourse;
+}
+
+<h1>Create</h1>
+
+<h4>Trainees</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+
+            <partial name="_TraineePartailView" model="Model"></partial>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
